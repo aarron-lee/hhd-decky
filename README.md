@@ -1,6 +1,6 @@
 # Decky HHD
 
-Decky Frontend for HHD
+Decky Frontend for HHD. Note that this is no longer being actively developed, PRs are welcome.
 
 ![plugin image](./images/plugin_image.png)
 
@@ -22,12 +22,12 @@ Decky Loader and HHD must already be installed, with the hhd http server enabled
 run the following in terminal, then reboot:
 
 ```
-curl -L https://github.com/hhd-dev/hhd-decky/raw/main/install.sh | sh
+curl -L https://github.com/aarron-lee/hhd-decky/raw/main/install.sh | sh
 ```
 
 ### Manual Install
 
-Download the latest release from the [releases page](https://github.com/hhd-dev/hhd-decky/releases)
+Download the latest release from the [releases page](https://github.com/aarron-lee/hhd-decky/releases)
 
 Unzip the `tar.gz` file, and move the `hhd-decky` folder to your `$HOME/homebrew/plugins` directory
 
@@ -41,10 +41,10 @@ If the plugin didn't show up in Decky, restart your machine
 
 ## Manual build
 Dependencies:
-- Node.js v16.14+ 
+- Node.js v16.14+
 
 ```bash
-git clone https://github.com/hhd-dev/hhd-decky.git
+git clone https://github.com/aarron-lee/hhd-decky.git
 
 cd hhd-decky
 
