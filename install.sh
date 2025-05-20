@@ -16,9 +16,9 @@ sudo rm -rf "$HOME/homebrew/plugins/hhd-decky"
 
 echo "installing hhd plugin"
 
-FINAL_URL='https://api.github.com/repos/hhd-dev/hhd-decky/releases/latest'
+FINAL_URL='https://api.github.com/repos/aarron-lee/hhd-decky/releases/latest'
 if [ $VERSION != "LATEST" ] ; then
-  FINAL_URL="https://api.github.com/repos/hhd-dev/hhd-decky/releases/tags/${VERSION}"
+  FINAL_URL="https://api.github.com/repos/aarron-lee/hhd-decky/releases/tags/${VERSION}"
 fi
 
 curl -L $(curl -s "${FINAL_URL}" | grep "browser_download_url" | cut -d '"' -f 4) -o $HOME/hhd-decky.tar.gz

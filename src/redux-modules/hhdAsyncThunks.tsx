@@ -16,7 +16,7 @@ export const fetchHhdSettings = createAsyncThunk(
     }
 
     return body;
-  }
+  },
 );
 
 export const fetchHhdSettingsState = createAsyncThunk(
@@ -30,7 +30,7 @@ export const fetchHhdSettingsState = createAsyncThunk(
     }
 
     return body;
-  }
+  },
 );
 
 export const updateHhdState = createAsyncThunk(
@@ -52,7 +52,7 @@ export const updateHhdState = createAsyncThunk(
     }
 
     return body;
-  }
+  },
 );
 
 export const fetchIsSteamDeckMode = createAsyncThunk(
@@ -65,7 +65,7 @@ export const fetchIsSteamDeckMode = createAsyncThunk(
       return Boolean(result.result);
     }
     return false;
-  }
+  },
 );
 
 export const fetchDeckyPluginVersion = createAsyncThunk(
@@ -75,13 +75,13 @@ export const fetchDeckyPluginVersion = createAsyncThunk(
 
     const result = await serverApi.callPluginMethod(
       "retrieve_plugin_version",
-      {}
+      {},
     );
     if (result.success) {
       return `${result.result}`;
     }
     return "";
-  }
+  },
 );
 
 export const fetchLatestPluginVersion = createAsyncThunk(
@@ -90,15 +90,15 @@ export const fetchLatestPluginVersion = createAsyncThunk(
     const serverApi = getServerApi() as ServerAPI;
 
     const { result } = await serverApi.fetchNoCors(
-      'https://raw.githubusercontent.com/hhd-dev/hhd-decky/main/package.json',
-      { method: 'GET' }
+      "https://raw.githubusercontent.com/aarron-lee/hhd-decky/main/package.json",
+      { method: "GET" },
     );
-  
+
     //@ts-ignore
     const body = result.body as string;
-    if (body && typeof body === 'string') {
-      return JSON.parse(body)['version'];
+    if (body && typeof body === "string") {
+      return JSON.parse(body)["version"];
     }
-    return '';
-  }
+    return "";
+  },
 );

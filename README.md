@@ -68,7 +68,7 @@ You can see an example in [reload.sh](./reload.sh)
 Or by using npm and frozen dependencies (not officially supported by Decky):
 ```bash
 # Clone and symlink to your homebrew dir
-git clone https://github.com/hhd-dev/hhd-decky.git
+git clone https://github.com/aarron-lee/hhd-decky.git
 cd hhd-decky
 
 # Install deps and build
